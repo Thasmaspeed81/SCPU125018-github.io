@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Nuzzat Shaikh Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuzzat Shaikh Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<!-- 🐧 Penguin -->
-<div class="penguin">🐧</div>
+<!-- 🌙 Dark Mode Toggle -->
+<div class="toggle" onclick="toggleDark()">🌙</div>
+
+<!-- 🐧 3D Penguin -->
+<div id="penguin-container"></div>
 
 <!-- Navbar -->
 <header>
@@ -16,67 +25,77 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#goals">Goals</a>
         <a href="#achievements">Achievements</a>
-        <a href="#projects">Projects</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <!-- Home -->
-<section id="home">
+<section id="home" class="fade">
     <img src="assets/profile.jpg" class="profile">
     <h1>Nuzzat Shaikh</h1>
     <p>B.Pharm Student | Future MBA Aspirant</p>
 </section>
 
 <!-- About -->
-<section id="about">
+<section id="about" class="fade">
     <h2>About Me</h2>
     <p>I am a first-year Bachelor of Pharmacy student at MIT Vishwaprayag. I aim to build a strong academic base and pursue an MBA to combine pharmaceutical knowledge with business skills.</p>
+
+    <div class="skills">
+        <div class="skill"><span>Communication</span></div>
+        <div class="skill"><span>Teamwork</span></div>
+        <div class="skill"><span>Basic Computer Skills</span></div>
+        <div class="skill"><span>Problem Solving</span></div>
+    </div>
+</section>
+
+<!-- Goals -->
+<section id="goals" class="fade highlight">
+    <h2>My Goal</h2>
+    <p>
+    As a first-year Bachelor of Pharmacy student, I am focused on building a strong academic foundation and achieving excellent grades. 
+    I aspire to pursue an MBA in Business to develop strategic, leadership, and management skills, aiming to integrate pharmaceutical knowledge with business expertise for a successful and impactful career.
+    </p>
 </section>
 
 <!-- Achievements -->
-<section id="achievements">
+<section id="achievements" class="fade">
     <h2>Achievements</h2>
 
     <div class="card">
         <img src="assets/cert1.jpg">
         <h3>Yuva AI for All</h3>
-        <p>Completed AI awareness certification.</p>
     </div>
 
     <div class="card">
         <img src="assets/cert2.jpg">
         <h3>Modern AI</h3>
-        <p>Completed AI fundamentals course.</p>
     </div>
 
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="card">
-        <h3>Sustainable Design Thinking</h3>
-        <p>Worked on Solar-Powered EV Charging Parking System.</p>
-    </div>
 </section>
 
 <!-- Gallery -->
-<section id="gallery">
+<section id="gallery" class="fade">
     <h2>Gallery</h2>
-    <img src="assets/profile.jpg">
-    <img src="assets/cert1.jpg">
-    <img src="assets/cert2.jpg">
+    <div class="grid">
+        <img src="assets/profile.jpg">
+        <img src="assets/cert1.jpg">
+        <img src="assets/cert2.jpg">
+    </div>
 </section>
 
 <!-- Contact -->
-<section id="contact">
+<section id="contact" class="fade">
     <h2>Contact</h2>
     <p>Email: nuzzatshaikh169@gmail.com</p>
-    <p>GitHub: SCPU125018/github.io</p>
+    <p>GitHub: https://thasmaspeed81.github.io/SCPU125018-github.io/</p>
 </section>
+
+<!-- THREE JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <script src="script.js"></script>
 </body>
