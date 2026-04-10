@@ -1,68 +1,140 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f5f1e8;
     color: #333;
+    transition: 0.3s;
+}
+
+/* Dark Mode */
+.dark {
+    background: #1c1c1c;
+    color: white;
+}
+
+/* Toggle */
+.toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 /* Navbar */
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: white;
+    padding: 20px 50px;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
 
 nav a {
-    margin: 10px;
+    margin: 15px;
     text-decoration: none;
     color: #555;
-    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: gold;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* Sections */
 section {
-    padding: 50px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 /* Profile */
 .profile {
-    width: 150px;
+    width: 160px;
     border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Cards */
 .card {
-    background: white;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
     padding: 20px;
     margin: 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     display: inline-block;
-    width: 250px;
+    transition: 0.3s;
 }
 
-/* Gallery */
-#gallery img {
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
     width: 200px;
-    margin: 10px;
     border-radius: 10px;
 }
 
-/* Penguin */
-.penguin {
+/* Gallery */
+.grid img {
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Skills */
+.skills {
+    margin-top: 20px;
+}
+
+.skill {
+    background: gold;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Highlight */
+.highlight {
+    background: linear-gradient(135deg, #f5f1e8, #fff5d7);
+}
+
+/* Fade Animation */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 1s;
+}
+
+.fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Penguin container */
+#penguin-container {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 40px;
-    animation: float 2s infinite ease-in-out;
-}
-
-/* Animation */
-@keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+    width: 120px;
+    height: 120px;
 }
