@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+    color: #333;
+}
+
+/* Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Profile */
+.profile {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    width: 250px;
+}
+
+/* Gallery */
+#gallery img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Penguin */
+.penguin {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
